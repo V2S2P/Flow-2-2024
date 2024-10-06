@@ -1,0 +1,10 @@
+The public keyword is first of all a "access modifier", that means that it can specify how to access classes, methods and fields/instance variables
+We already know we can use the .(dot) operator to access fields/instance variables and methods of classes and objects, that can be changed though.
+With the public access modifier we set the access level is basically set to "everywhere". That means that everything that is public can be accessed
+inside a class, outside a class, inside the package and outside the package
+
+The private keyword is like the public keyword, an access modifier. If we use private, the access level is only inside the class. Everything that is
+private can not be accessed from outside the class.
+
+Static is a "Non-access modifier", so when we use the static keyword, we can access fields/instance variables and methods using the class name.
+An example is looking at the "System.out" command, here we look at the "out" part, "out" is a static field of "System".
