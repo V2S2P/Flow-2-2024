@@ -1,0 +1,14 @@
+@startuml
+class Person{
+- String name
+- int age
++ Person(String name, int age)
++ String getName()
++ void setName(String name)
++ int getAge()
++ void setAge(int age)
++ String toString()
+}
+
+
+@enduml
