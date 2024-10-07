@@ -28,10 +28,19 @@ public class TextUI {
     public ArrayList<String> promptChoice(ArrayList<String> options, int limit, String msg){
         displayList(options,msg);
         ArrayList<String> choices = new ArrayList<>();
+
         while(choices.size() < limit) {
-            String choice = promptText("Vælg en drink");//tjekke om brugeren skal vælge flere drinks
-            promptText(msg);
-            choices.add(choice);
+            String choice = promptText("Indtast nummeret på din drink:");
+            try{
+                int index = Integer.parseInt(choice) -  1;
+                if (index >= 0 && index < options.size()){
+                    choices.add(options.get(index));
+                }else{
+                    System.out.println("Ugyldigt valg, prøv igen.");
+                }
+            } catch (NumberFormatException e){
+                System.out.println("Indtast venligst et gyldigt nummer.");
+            }
         }
         return choices;
     }
