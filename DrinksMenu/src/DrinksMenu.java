@@ -6,19 +6,19 @@ import java.util.Scanner;
 class DrinksMenu{
 
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-      // TODO 1: Skriv en TextUI klasse og tilføj en instans af TextUI her, som til sidst skal erstatte direkte brug af Scanner objeketet i denne klasse.
-      Scanner scan = new Scanner(System.in);
-      TextUI ui = new TextUI();
+        // TODO 1: Skriv en TextUI klasse og tilføj en instans af TextUI her, som til sidst skal erstatte direkte brug af Scanner objeketet i denne klasse.
+        Scanner scan = new Scanner(System.in);
+        TextUI ui = new TextUI();
 
 
    /*
    Vi beder om brugerens alder
    */
 
-      // TODO 2: Reducer dette til én linje ved at anvende TextUI metoden promptNumeric() i stedet for
-       int age = ui.promptNumeric("Hvor gammel er du?");
+        // TODO 2: Reducer dette til én linje ved at anvende TextUI metoden promptNumeric() i stedet for
+        int age = ui.promptNumeric("Hvor gammel er du?");
 
 
     /*
@@ -27,28 +27,28 @@ class DrinksMenu{
     */
 
 
-      ArrayList<String> options = new ArrayList<String>();
+        ArrayList<String> options = new ArrayList<String>();
 
-      if (age >= 18) {
-          options.add("Gin&Tonic");
-          options.add("Martini");
-          options.add("Gin&Hass");
+        if (age >= 18) {
+            options.add("Gin&Tonic");
+            options.add("Martini");
+            options.add("Gin&Hass");
 
-      } else {
-          options.add("Milk");
-          options.add("Juice");
-          options.add("Saftevand");
+        } else {
+            options.add("Milk");
+            options.add("Juice");
+            options.add("Saftevand");
 
-      }
-      options.add("vand");
+        }
+        options.add("vand");
 
 
     /*
      Vi viser listen til brugeren
      */
 
-      //TODO 3: Reducer dette til en linje ved at anvende TextUI metoden displayList() i stedet for
-      ui.displayList(options,"hvad ville du have at drikke");
+        //TODO 3: Reducer dette til en linje ved at anvende TextUI metoden displayList() i stedet for
+        ui.displayList(options,"Menu:");
 
 
 
@@ -59,12 +59,12 @@ class DrinksMenu{
     Hvert valg placerer vi i en liste, så vi kan udskrive bestillingen tilsidst.
     */
 
-      // TODO 4: anvend TextUI's promptNumeric metode, i stedet for disse to linjer
-      ui.promptNumeric("Hvor mange drinks vil du bestille?");   //Give brugere et sted at placere sit svar og vente på svaret
+        // TODO 4: anvend TextUI's promptNumeric metode, i stedet for disse to linjer
+        int numberOfDrinks = ui.promptNumeric("Hvor mange drinks vil du bestille?");   //Give brugere et sted at placere sit svar og vente på svaret
 
 
-      //TODO 5: Reducer 6 linjer til 1 linje ved at anvende TextUI metoden promptChoice() i stedet for
-      ArrayList<String> choices = ui.promptChoice(options,age,"drinks");  //Lave en beholder til at gemme brugerens valg
+        //TODO 5: Reducer 6 linjer til 1 linje ved at anvende TextUI metoden promptChoice() i stedet for
+        ArrayList<String> choices = ui.promptChoice(options,numberOfDrinks,"Vælg dine drinks");  //Lave en beholder til at gemme brugerens valg
 
 
 
@@ -72,8 +72,8 @@ class DrinksMenu{
       /*
       Vi viser brugerens bestilling
       */
-      //TODO 6: Genbrug TextUI metoden displayList(choices) i stedet for
-      ui.displayList(choices,"Din bestilling:");
+        //TODO 6: Genbrug TextUI metoden displayList(choices) i stedet for
+        ui.displayList(choices,"Din bestilling: ");
 
 
 
@@ -87,6 +87,7 @@ class DrinksMenu{
 
 
 
-  }
+    }
 
+}
 }
