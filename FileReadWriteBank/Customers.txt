@@ -1,0 +1,3 @@
+Valdemar,Valdemar123,1,1000.0
+Oliver,Oliver123,2,0.0
+Big Hank,BigHank123,3,0.0
